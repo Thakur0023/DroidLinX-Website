@@ -40,10 +40,10 @@ const Contact: React.FC = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl sm:text-5xl font-bold mb-4 bg-gradient-to-r from-primary-400 to-accent-500 bg-clip-text text-transparent">
+          <h2 className="text-4xl sm:text-5xl font-bold mb-4 gradient-text leading-tight drop-shadow-lg">
             Get In Touch
           </h2>
-          <p className="text-secondary-400 text-lg">
+          <p className="text-text-secondary text-lg">
             Have questions or want to collaborate? We'd love to hear from you!
           </p>
         </motion.div>
@@ -58,31 +58,31 @@ const Contact: React.FC = () => {
         >
           <div className="space-y-8">
             <div>
-              <h3 className="text-xl font-bold text-primary-300 mb-2 flex items-center gap-3">
+              <h3 className="text-xl font-bold text-accent-cyan mb-2 flex items-center gap-3">
                 <span className="text-2xl">📍</span> Location
               </h3>
-              <p className="text-secondary-400">
+              <p className="text-text-secondary">
                 C3, Room no. 615<br />
                 Chandigarh University
               </p>
             </div>
 
             <div>
-              <h3 className="text-xl font-bold text-primary-300 mb-2 flex items-center gap-3">
+              <h3 className="text-xl font-bold text-accent-green mb-2 flex items-center gap-3">
                 <span className="text-2xl">📧</span> Email
               </h3>
               <div className="space-y-1">
-                <a href="mailto:thakurankit2399@gmail.com" className="text-primary-400 hover:text-primary-300 transition-colors block">
+                <a href="mailto:thakurankit2399@gmail.com" className="text-accent-cyan hover:text-accent-blue transition-colors block font-medium">
                   thakurankit2399@gmail.com
                 </a>
-                <a href="mailto:khyatghosh@gmail.com" className="text-primary-400 hover:text-primary-300 transition-colors block">
+                <a href="mailto:khyatghosh@gmail.com" className="text-accent-cyan hover:text-accent-blue transition-colors block font-medium">
                   khyatghosh@gmail.com
                 </a>
               </div>
             </div>
 
             <div>
-              <h3 className="text-xl font-bold text-primary-300 mb-2 flex items-center gap-3">
+              <h3 className="text-xl font-bold text-accent-amber mb-2 flex items-center gap-3">
                 <span className="text-2xl">💬</span> Connect With Us
               </h3>
               <div className="flex gap-4">
@@ -98,7 +98,7 @@ const Contact: React.FC = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     title={social.name}
-                    className="w-12 h-12 rounded-lg bg-secondary-800 border border-secondary-700 hover:border-primary-500 flex items-center justify-center hover:shadow-lg hover:shadow-primary-500/10 transition-all duration-300"
+                    className="w-12 h-12 rounded-lg bg-accent-purple/20 border border-accent-cyan/50 hover:border-accent-cyan hover:bg-accent-cyan/10 flex items-center justify-center hover:shadow-lg hover:shadow-accent-cyan/40 transition-all duration-300"
                   >
                     <span className="text-lg">{social.icon}</span>
                   </a>
@@ -117,7 +117,7 @@ const Contact: React.FC = () => {
           className="space-y-6"
         >
           <div>
-            <label htmlFor="name" className="block text-sm font-medium text-secondary-300 mb-2">
+            <label htmlFor="name" className="block text-sm font-medium text-text-secondary mb-2">
               Name
             </label>
             <input
@@ -127,13 +127,13 @@ const Contact: React.FC = () => {
               value={formData.name}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 bg-secondary-800 border border-secondary-700 rounded-lg text-secondary-100 placeholder-secondary-500 focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 transition-all duration-200"
+              className="w-full px-4 py-3 bg-bg-secondary border border-accent-purple/30 rounded-lg text-text-primary placeholder-text-tertiary focus:outline-none focus:border-accent-cyan focus:ring-1 focus:ring-accent-cyan transition-all duration-200"
               placeholder="Your name"
             />
           </div>
 
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-secondary-300 mb-2">
+            <label htmlFor="email" className="block text-sm font-medium text-text-secondary mb-2">
               Email
             </label>
             <input
@@ -143,13 +143,13 @@ const Contact: React.FC = () => {
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 bg-secondary-800 border border-secondary-700 rounded-lg text-secondary-100 placeholder-secondary-500 focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 transition-all duration-200"
+              className="w-full px-4 py-3 bg-bg-secondary border border-accent-purple/30 rounded-lg text-text-primary placeholder-text-tertiary focus:outline-none focus:border-accent-cyan focus:ring-1 focus:ring-accent-cyan transition-all duration-200"
               placeholder="your@email.com"
             />
           </div>
 
           <div>
-            <label htmlFor="subject" className="block text-sm font-medium text-secondary-300 mb-2">
+            <label htmlFor="subject" className="block text-sm font-medium text-text-secondary mb-2">
               Subject
             </label>
             <input
@@ -159,13 +159,13 @@ const Contact: React.FC = () => {
               value={formData.subject}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 bg-secondary-800 border border-secondary-700 rounded-lg text-secondary-100 placeholder-secondary-500 focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 transition-all duration-200"
+              className="w-full px-4 py-3 bg-bg-secondary border border-accent-purple/30 rounded-lg text-text-primary placeholder-text-tertiary focus:outline-none focus:border-accent-cyan focus:ring-1 focus:ring-accent-cyan transition-all duration-200"
               placeholder="How can we help?"
             />
           </div>
 
           <div>
-            <label htmlFor="message" className="block text-sm font-medium text-secondary-300 mb-2">
+            <label htmlFor="message" className="block text-sm font-medium text-text-secondary mb-2">
               Message
             </label>
             <textarea
@@ -175,7 +175,7 @@ const Contact: React.FC = () => {
               onChange={handleChange}
               required
               rows={5}
-              className="w-full px-4 py-3 bg-secondary-800 border border-secondary-700 rounded-lg text-secondary-100 placeholder-secondary-500 focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 transition-all duration-200 resize-none"
+              className="w-full px-4 py-3 bg-bg-secondary border border-accent-purple/30 rounded-lg text-text-primary placeholder-text-tertiary focus:outline-none focus:border-accent-cyan focus:ring-1 focus:ring-accent-cyan transition-all duration-200 resize-none"
               placeholder="Tell us more..."
             />
           </div>

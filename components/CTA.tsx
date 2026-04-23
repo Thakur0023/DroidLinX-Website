@@ -15,15 +15,15 @@ const CTA: React.FC = () => {
         viewport={{ once: true }}
         className="max-w-3xl mx-auto text-center"
       >
-        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-primary-400 via-primary-300 to-accent-500 bg-clip-text text-transparent">
+        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 gradient-text leading-tight drop-shadow-lg">
           Ready to Join DroidLinX?
         </h2>
 
-        <p className="text-lg text-secondary-300 mb-8">
+        <p className="text-lg text-text-secondary mb-8 max-w-2xl mx-auto">
           Whether you're interested in learning new technologies, collaborating on exciting projects, or growing your network—we've got a place for you.
         </p>
 
-        <div className="bg-secondary-800/50 border border-secondary-700 rounded-lg p-8 mb-8">
+        <div className="bg-gradient-to-br from-accent-purple/20 to-accent-cyan/10 border border-accent-cyan/50 rounded-2xl p-8 mb-8 shadow-lg shadow-accent-cyan/20 glow-effect">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
             <motion.div
               initial={{ opacity: 0, y: 10 }}
@@ -31,9 +31,9 @@ const CTA: React.FC = () => {
               transition={{ duration: 0.4, delay: 0 }}
               viewport={{ once: true }}
             >
-              <div className="text-3xl mb-2">🚀</div>
-              <h3 className="font-bold text-primary-300 mb-2">Learn</h3>
-              <p className="text-secondary-400 text-sm">
+              <div className="text-4xl mb-3">🚀</div>
+              <h3 className="font-bold text-accent-cyan mb-2 text-lg">Learn</h3>
+              <p className="text-text-secondary text-sm">
                 Master cutting-edge technologies through workshops and mentorship
               </p>
             </motion.div>
@@ -44,9 +44,9 @@ const CTA: React.FC = () => {
               transition={{ duration: 0.4, delay: 0.1 }}
               viewport={{ once: true }}
             >
-              <div className="text-3xl mb-2">🤝</div>
-              <h3 className="font-bold text-primary-300 mb-2">Build</h3>
-              <p className="text-secondary-400 text-sm">
+              <div className="text-4xl mb-3">🤝</div>
+              <h3 className="font-bold text-accent-green mb-2 text-lg">Build</h3>
+              <p className="text-text-secondary text-sm">
                 Collaborate on impactful projects with talented team members
               </p>
             </motion.div>
@@ -57,9 +57,9 @@ const CTA: React.FC = () => {
               transition={{ duration: 0.4, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <div className="text-3xl mb-2">🌟</div>
-              <h3 className="font-bold text-primary-300 mb-2">Grow</h3>
-              <p className="text-secondary-400 text-sm">
+              <div className="text-4xl mb-3">🌟</div>
+              <h3 className="font-bold text-accent-amber mb-2 text-lg">Grow</h3>
+              <p className="text-text-secondary text-sm">
                 Build your network and advance your tech career
               </p>
             </motion.div>

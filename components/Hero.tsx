@@ -22,7 +22,7 @@ const Hero: React.FC = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.4, delay: 0.1 }}
-                className="px-3 py-1 bg-accent-blue/10 border border-accent-blue/30 rounded-full text-accent-blue text-sm font-medium"
+                className="px-4 py-2 bg-gradient-to-r from-accent-cyan/20 to-accent-purple/20 border border-accent-cyan/50 rounded-full text-accent-cyan text-sm font-medium shadow-lg shadow-accent-cyan/30"
               >
                 Full Stack + Android Development
               </motion.div>
@@ -32,7 +32,7 @@ const Hero: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-5xl sm:text-6xl lg:text-7xl font-bold font-display text-text-primary leading-tight"
+              className="text-5xl sm:text-6xl lg:text-7xl font-bold font-display gradient-text leading-tight drop-shadow-lg"
             >
               DroidLinX
             </motion.h1>
@@ -84,9 +84,9 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative h-96 lg:h-full"
+            className="relative h-96 lg:h-full animate-float"
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-accent-blue/10 to-accent-green/10 rounded-2xl border border-border-default overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-br from-accent-purple/20 via-accent-cyan/10 to-accent-green/20 rounded-3xl border border-accent-cyan/40 overflow-hidden glow-effect">
               <AnimatedAndroid />
             </div>
           </motion.div>

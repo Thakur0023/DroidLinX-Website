@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Gradient background effect */
+:root {
+  --gradient-1: linear-gradient(135deg, #D946EF 0%, #0FD7FF 50%, #00FF88 100%);
+  --gradient-2: linear-gradient(135deg, #FFB703 0%, #FF006E 100%);
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -10,6 +16,7 @@
   body {
     @apply bg-bg-primary text-text-primary font-sans;
     min-height: 100vh;
+    background: linear-gradient(135deg, #0F0A1F 0%, #1a1535 50%, #251f45 100%);
   }
 
   * {
@@ -21,17 +28,45 @@
   }
 
   a {
-    @apply text-accent-blue hover:text-accent-blue/80 transition-colors;
+    @apply text-accent-cyan hover:text-accent-blue transition-colors;
   }
 }
 
 @layer components {
+  /* Gradient text utility */
+  .gradient-text {
+    background: linear-gradient(135deg, #00D9FF 0%, #D946EF 50%, #00FF88 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .gradient-text-alt {
+    background: linear-gradient(135deg, #FFB703 0%, #FF006E 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Glow effect */
+  .glow-effect {
+    box-shadow: 0 0 20px rgba(0, 217, 255, 0.3), 0 0 40px rgba(217, 70, 239, 0.2);
+  }
+
+  .glow-effect-pink {
+    box-shadow: 0 0 20px rgba(255, 0, 110, 0.3), 0 0 40px rgba(217, 70, 239, 0.2);
+  }
+
+  .glow-effect-green {
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.3), 0 0 40px rgba(139, 92, 246, 0.2);
+  }
+
   .btn-primary {
-    @apply inline-flex items-center justify-center rounded-lg font-medium bg-accent-blue hover:bg-accent-blue/90 text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-accent-blue focus:ring-offset-2 focus:ring-offset-bg-primary disabled:opacity-50 disabled:pointer-events-none;
+    @apply inline-flex items-center justify-center rounded-lg font-medium bg-accent-cyan text-black hover:bg-accent-blue transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-accent-cyan focus:ring-offset-2 focus:ring-offset-bg-primary disabled:opacity-50 disabled:pointer-events-none shadow-lg hover:shadow-xl hover:shadow-accent-cyan/50 font-semibold;
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center rounded-lg font-medium bg-bg-secondary hover:bg-bg-secondary/80 text-text-primary border border-border-default hover:border-text-secondary transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-accent-blue focus:ring-offset-2 focus:ring-offset-bg-primary disabled:opacity-50 disabled:pointer-events-none;
+    @apply inline-flex items-center justify-center rounded-lg font-medium bg-bg-secondary hover:bg-bg-tertiary text-text-primary border border-accent-purple/50 hover:border-accent-purple transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-accent-purple focus:ring-offset-2 focus:ring-offset-bg-primary disabled:opacity-50 disabled:pointer-events-none shadow-lg hover:shadow-xl hover:shadow-accent-purple/30;
   }
 
   .btn-ghost {
@@ -47,10 +82,10 @@
   }
 
   .card-base {
-    @apply bg-bg-secondary border border-border-default rounded-lg transition-all duration-200;
+    @apply bg-gradient-to-br from-bg-secondary to-bg-tertiary border border-accent-purple/20 rounded-xl transition-all duration-300;
   }
 
   .card-hover {
-    @apply hover:border-text-secondary hover:bg-bg-secondary/80;
+    @apply hover:border-accent-cyan/60 hover:bg-bg-tertiary hover:shadow-lg hover:shadow-accent-cyan/20 hover:scale-105 transform;
   }
 }
